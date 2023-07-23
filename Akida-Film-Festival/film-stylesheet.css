@@ -1,0 +1,93 @@
+.hover-3 {
+	--b: 0.1em;   /* the thickness of the line */
+	--c: rgb(255, 0, 255); /* the color */
+
+	color: #000;
+	padding-block: var(--b);
+	background: 
+	  linear-gradient(var(--c) 50%,rgb(255, 0 ,255) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+	  linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+	-webkit-background-clip: text,padding-box;
+			background-clip: text,padding-box;
+			width: fit-content;
+	transition: .9s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+
+.hover-3:hover {
+	--_p: 100%;
+	--_s: .3s;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+} 
+  
+body {
+	margin: 0;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 20px 50px;
+	place-content: center;
+	align-items: end;
+}
+
+h3 {
+	font-family: Raleway, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	margin:0 auto;
+	cursor: pointer;
+	padding: 0 .1em;
+	text-align: center;	
+}
+
+.film-wrapper {
+	margin-top: 10%;
+	margin-bottom: 20%;
+	margin-right: 35%;
+}
+
+.film-entry {
+	margin-top: 10%;
+	margin-bottom:10%
+}
+
+.film-description {
+	color: #8f8f8f;
+  	font-family: Raleway, sans-serif;
+  	font-weight: 900;
+  	font-size: 1.4em;
+  	margin-left: 20%;
+  	margin-right: 20%;
+	margin-top: -66%;
+	margin-bottom: 29%;
+	position: relative;
+	text-align: center;
+}
+
+.film-poster {
+	position: relative;
+	display: block;
+	margin-right: auto;
+	margin-top: -2%;
+	margin-bottom: 25%;
+	margin-left: 100%;
+	transition: all 0.2s 0s ease-out;
+}
+
+.film-poster:hover {
+	transform: scale(1.08);
+}
+
+@media (max-width: 1153px) {
+	.film-wrapper {
+		margin-top: 0%;
+	}
+	.film-entry {
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	.film-description {
+		margin-top: 5%;
+	}
+}
