@@ -250,9 +250,11 @@ div.random-text {
 }
 
 .funky-text {
-	margin-top: 20%;
 	position: relative;
 	animation: fadeInRight 1s ease-in-out;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10%;
 }
 
 @keyframes fadeInRight {
@@ -263,6 +265,14 @@ div.random-text {
 	to {
 		opacity: 1;
 	}
+}
+
+.introduction-text-s {
+	font-family: Raleway;
+	color: #000;
+	line-height: 1.2;
+	font-weight: 550;
+	position: relative;
 }
 
 .introduction-text-s::before {  
@@ -303,16 +313,157 @@ div.random-text {
 	letter-spacing: -0.02em;
 }
 
-.introduction-text-s {
-	font-family: Raleway;
-	color: #000;
-	line-height: 1.2;
-	font-weight: 550;
+.introduction-text-ultra {
 	position: relative;
+  	background-image: linear-gradient(
+    /* -225deg, */
+	170deg,
+	#e157ff 0%,
+	#4344fd 16.7%,
+	#9b17e4 33.4%,
+	#3931fe 50%,
+	#cd6bff 66.8%,
+	#6477fe 83.5%,
+	#7d29f7 100%
+  	);
+  	background-size: auto auto;
+  	background-clip: border-box;
+  	background-size: 200% auto;
+  	color: #fff;
+  	background-clip: text;
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	animation: text-background-anim 0.5s linear infinite;
+  	display: inline-block;
+	font-family: Raleway;
+	font-weight: 600;
+	font-size: 1em;
 }
 
+@keyframes text-background-anim {
+	to {
+	  background-position: 200% center;
+	}
+}
+
+  .anim {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin: 20px auto;
+	width: fit-content;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-bottom: -100px;
+	height: fit-content;
+	background: #fff;
+	border-radius: 75px;
+  }
+  
+  .anim:hover::before, .anim:hover::after {
+	display: block;
+	content: '';
+	position: absolute;
+	width: 101%;
+	height: 100%;
+	background-color: #6748fe;
+	border-radius: 75px;
+	z-index: -1;
+	animation: 1s clockwise infinite;
+	opacity: 0.5;
+  }
+  
+  .anim:hover:after {
+	background: #88fefe;
+	animation: 2s counterclockwise infinite;
+	opacity: 0.5;
+  }
+  
+  @keyframes clockwise {
+	0% {
+	  top: -5px;
+	  left: 0;
+	}
+	12% {
+	  top: -2px;
+	  left: 2px;
+	}
+	25% {
+	  top: 0;
+	  left: 5px;    
+	}
+	37% {
+	  top: 2px;
+	  left: 2px;
+	}
+	50% {
+	  top: 5px;
+	  left: 0;    
+	}
+	62% {
+	  top: 2px;
+	  left: -2px;
+	}
+	75% {
+	  top: 0;
+	  left: -5px;
+	}
+	87% {
+	  top: -2px;
+	  left: -2px;
+	}
+	100% {
+	  top: -5px;
+	  left: 0;    
+	}
+  }
+  
+  @keyframes counterclockwise {
+	0% {
+	  top: -5px;
+	  right: 0;
+	}
+	12% {
+	  top: -2px;
+	  right: 2px;
+	}
+	25% {
+	  top: 0;
+	  right: 5px;    
+	}
+	37% {
+	  top: 2px;
+	  right: 2px;
+	}
+	50% {
+	  top: 5px;
+	  right: 0;    
+	}
+	62% {
+	  top: 2px;
+	  right: -2px;
+	}
+	75% {
+	  top: 0;
+	  right: -5px;
+	}
+	87% {
+	  top: -2px;
+	  right: -2px;
+	}
+	100% {
+	  top: -5px;
+	  right: 0;    
+	}
+  }
+
+
+
+
+
 .indent1 {
-	margin-left: 33%;
+	margin-left: 25%;
 }
 
 .indent2 {
@@ -328,8 +479,9 @@ div.random-text {
 	margin-top: 15%;
 }
 
-.compete4awards {
+.award-related-text {
 	margin-left: 3%;
+	margin-right: 4%;
 }
 
 @media screen and (max-width: 1153px) {
@@ -360,15 +512,14 @@ div.random-text {
 
 	.funky-text {
 		margin-left: 7%;
-		margin-top: 40%;
-		margin-bottom: 20%;
+		margin-top: 20%;
 	}
 	.introduction-text-n {
 		font-size: 2.2em;
-		font-weight: 550;
+		font-weight: 500;
 	}
 	.introduction-text-s {
-		font-weight: 750;
+		font-weight: 550;
 	}
 	.indent1 {
 		margin-left: 0%;
